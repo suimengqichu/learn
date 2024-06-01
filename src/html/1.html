@@ -41,14 +41,27 @@
         background-image: conic-gradient(transparent, #66ddf7, transparent 30%);
         z-index: -20;
         /* transform-origin: 50% 50%; */
-        animation: rotate 5s linear infinite;
+        animation:
+          rotate 5s linear infinite,
+          chBg 5s linear infinite;
+        /* animation: chBg 5s linear infinite; */
+      }
+      @keyframes chBg {
+        from {
+          filter: hue-rotate(0deg);
+        }
+        to {
+          filter: hue-rotate(360deg);
+        }
       }
       @keyframes rotate {
         0% {
           transform: rotate(0deg);
+          /* filter: hue-rotate(0deg); */
         }
         100% {
           transform: rotate(360deg);
+          /* filter: hue-rotate(360deg); */
         }
       }
       /* 伪元素设置为和盒子一样大，并且设置层级比盒子更高，这样伪元素就能覆盖在盒子之上 */
