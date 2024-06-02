@@ -43,8 +43,9 @@ body {
   background-image: conic-gradient(transparent, #66ddf7, transparent 30%);
   /* transform-origin: 50% 50%; */
 
-  animation: rotate 5s linear infinite,
-  chBg 5s linear infinite;
+  animation:
+    rotate 5s linear infinite,
+    chBg 5s linear infinite;
 
   content: '';
   /* animation: chBg 5s linear infinite; */

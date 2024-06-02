@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --clr: #a12db5;
+}
+
+body {
+  display: flex;
+
+  min-height: 100vh;
+
+  background: #222;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+
+  position: relative;
+
+  width: 600px;
+  height: 400px;
+
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tabs {
+  position: relative;
+
+  padding: 40px 0;
+  width: 80px;
+}
+
+.tabs input {
+  display: none;
+
+  appearance: none;
+}
+
+.tabs .icon {
+  display: flex;
+
+  position: relative;
+
+  flex-direction: column;
+}
+
+.tabs .icon label {
+  z-index: 2;
+
+  width: 80px;
+  height: 80px;
+
+  font-size: 20px;
+  line-height: 80px;
+  text-align: center;
+
+  color: #fff;
+
+  opacity: 0.25;
+
+  transition: 0.5s;
+
+  cursor: pointer;
+}
+
+.tabs input:nth-of-type(1):checked ~ .icon label:nth-of-type(1),
+.tabs input:nth-of-type(2):checked ~ .icon label:nth-of-type(2),
+.tabs input:nth-of-type(3):checked ~ .icon label:nth-of-type(3),
+.tabs input:nth-of-type(4):checked ~ .icon label:nth-of-type(4) {
+  opacity: 1;
+}
+
+.indicator {
+  position: absolute;
+  z-index: 1;
+
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  width: 80px;
+  height: 80px;
+
+  background: var(--clr);
+
+  transition: 0.5s;
+}
+
+.indicator::before {
+  position: absolute;
+  top: -20px;
+  right: 0;
+
+  border-bottom-right-radius: 20px;
+  width: 20px;
+  height: 20px;
+
+  background: transparent;
+
+  box-shadow: 8px 8px 0 8px var(--clr);
+
+  content: '';
+}
+
+.indicator::after {
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+
+  border-top-right-radius: 20px;
+  width: 20px;
+  height: 20px;
+
+  background: transparent;
+
+  box-shadow: 8px -8px 0 8px var(--clr);
+
+  content: '';
+}
+
+.tabs input:nth-of-type(1):checked ~ .icon .indicator {
+  top: 0;
+}
+
+.tabs input:nth-of-type(2):checked ~ .icon .indicator {
+  top: 25%;
+}
+
+.tabs input:nth-of-type(3):checked ~ .icon .indicator {
+  top: 50%;
+}
+
+.tabs input:nth-of-type(4):checked ~ .icon .indicator {
+  top: 75%;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 520px;
+  height: 400px;
+
+  background: var(--clr);
+}
