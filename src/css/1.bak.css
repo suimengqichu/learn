@@ -29,33 +29,6 @@ body {
 
   color: #66ddf7;
   background-color: #fff;
-
-  --startDeg: 0deg;
-  --endDeg: 100deg;
-  --startDegDelta: -360deg;
-  --endDegDelta: -260deg;
-  --startPer: 0%;
-  --endPer: 30%;
-}
-@property --startDeg {
-  syntax: '<angle>';
-  initial-value: 0deg;
-  inherits: true;
-}
-@property --endDeg {
-  syntax: '<angle>';
-  initial-value: 100deg;
-  inherits: true;
-}
-@property --startDegDelta {
-  syntax: '<angle>';
-  initial-value: -360deg;
-  inherits: true;
-}
-@property --endDegDelta {
-  syntax: '<angle>';
-  initial-value: -260deg;
-  inherits: true;
 }
 .box::before {
   position: absolute;
@@ -67,18 +40,7 @@ body {
   height: 200%;
   /* background-color: #22292f; */
 
-  background-image: conic-gradient(
-    transparent var(--startDeg),
-    #66ddf7,
-    transparent var(--endDeg)
-  ),
-  conic-gradient(
-    transparent var(--startDegDelta),
-    #66ddf7,
-    transparent var(--endDegDelta)
-  );
-  /* 设置动画 */
-  /* animation: rotate 5s linear infinite; */
+  background-image: conic-gradient(transparent, #66ddf7, transparent 30%);
   /* transform-origin: 50% 50%; */
 
   animation:
@@ -98,17 +60,12 @@ body {
 }
 @keyframes rotate {
   0% {
-    --startDeg: 0deg;
-    --endDeg: 100deg;
-    --startDegDelta: -360deg;
-    --endDegDelta: -260deg;
+    transform: rotate(0deg);
+    /* filter: hue-rotate(0deg); */
   }
-
   100% {
-    --startDeg: 360deg;
-    --endDeg: 460deg;
-    --startDegDelta: 0deg;
-    --endDegDelta: 100deg;
+    transform: rotate(360deg);
+    /* filter: hue-rotate(360deg); */
   }
 }
 /* 伪元素设置为和盒子一样大，并且设置层级比盒子更高，这样伪元素就能覆盖在盒子之上 */
