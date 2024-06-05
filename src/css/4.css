@@ -1,9 +1,8 @@
 * {
-  margin: 0;
   box-sizing: border-box;
   padding: 0;
-
-  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  font-family: Poppins, sans-serif;
 }
 
 :root {
@@ -12,65 +11,49 @@
 
 body {
   display: flex;
-
-  min-height: 100vh;
-
-  background: #222;
-
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #222;
 }
 
 .container {
-  display: flex;
-
   position: relative;
-
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   width: 600px;
   height: 400px;
-
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 .tabs {
   position: relative;
-
-  padding: 40px 0;
   width: 80px;
+  padding: 40px 0;
 }
 
 .tabs input {
   display: none;
-
   appearance: none;
 }
 
 .tabs .icon {
-  display: flex;
-
   position: relative;
-
+  display: flex;
   flex-direction: column;
 }
 
 .tabs .icon label {
   z-index: 2;
-
   width: 80px;
   height: 80px;
-
   font-size: 20px;
   line-height: 80px;
-  text-align: center;
-
   color: #fff;
-
-  opacity: 0.25;
-
-  transition: 0.5s;
-
+  text-align: center;
   cursor: pointer;
+  opacity: 0.25;
+  transition: 0.5s;
 }
 
 .tabs input:nth-of-type(1):checked ~ .icon label:nth-of-type(1),
@@ -83,14 +66,11 @@ body {
 .indicator {
   position: absolute;
   z-index: 1;
-
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
   width: 80px;
   height: 80px;
-
   background: var(--clr);
-
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
   transition: 0.5s;
 }
 
@@ -98,32 +78,24 @@ body {
   position: absolute;
   top: -20px;
   right: 0;
-
-  border-bottom-right-radius: 20px;
   width: 20px;
   height: 20px;
-
-  background: transparent;
-
-  box-shadow: 8px 8px 0 8px var(--clr);
-
   content: '';
+  background: transparent;
+  border-bottom-right-radius: 20px;
+  box-shadow: 8px 8px 0 8px var(--clr);
 }
 
 .indicator::after {
   position: absolute;
   right: 0;
   bottom: -20px;
-
-  border-top-right-radius: 20px;
   width: 20px;
   height: 20px;
-
-  background: transparent;
-
-  box-shadow: 8px -8px 0 8px var(--clr);
-
   content: '';
+  background: transparent;
+  border-top-right-radius: 20px;
+  box-shadow: 8px -8px 0 8px var(--clr);
 }
 
 .tabs input:nth-of-type(1):checked ~ .icon .indicator {
@@ -146,9 +118,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-
   width: 520px;
   height: 400px;
-
   background: var(--clr);
 }

@@ -18,12 +18,12 @@ body {
   overflow: hidden;
 
   position: relative;
-  /* 这里必须设置z-index具体值即可，如果不设置无法显示设置较低层级伪元素中的内容，但需注意伪元素由于是会覆盖整个元素内容，不能设置比伪元素小的值 */
+  /* 这里必须设置z-index具体值即可，如果不设置无法显示设置较低层级伪元素中的内容，但需注意伪元素由于是会覆盖整个元素内容，不能设置比伪元素小的值，伪元素的z-index必须是负值 */
   z-index: 0;
 
   border-radius: 20px;
-  /* 通过padding将元素尽量设置成一个正方形，使得在动画过程中流水边框不容易看出区别 */
   padding: 40px 40px;
+  /* 通过padding将元素尽量设置成一个正方形，使得在动画过程中流水边框不容易看出区别 */
 
   font-size: 18px;
 
@@ -68,15 +68,15 @@ body {
   /* background-color: #22292f; */
 
   background-image: conic-gradient(
-    transparent var(--startDeg),
-    #66ddf7,
-    transparent var(--endDeg)
-  ),
-  conic-gradient(
-    transparent var(--startDegDelta),
-    #66ddf7,
-    transparent var(--endDegDelta)
-  );
+      transparent var(--startDeg),
+      #66ddf7,
+      transparent var(--endDeg)
+    ),
+    conic-gradient(
+      transparent var(--startDegDelta),
+      #66ddf7,
+      transparent var(--endDegDelta)
+    );
   /* 设置动画 */
   /* animation: rotate 5s linear infinite; */
   /* transform-origin: 50% 50%; */

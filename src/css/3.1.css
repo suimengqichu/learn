@@ -1,0 +1,14 @@
+html {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+body {
+  display: flex;
+  height: 100vh;
+  font-family: Arial;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  justify-content: center;
+  align-items: center;
+}
