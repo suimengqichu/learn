@@ -1,14 +1,89 @@
-html {
-  margin: 0;
+* {
   box-sizing: border-box;
+  margin: 0;
   padding: 0;
 }
 body {
   display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
+
   font-family: Arial;
   line-height: 1.6;
+
   background-color: #f4f4f4;
-  justify-content: center;
-  align-items: center;
+}
+
+.box-wrapper {
+  --start-deg: 0deg;
+
+  position: relative;
+  z-index: 10;
+
+  min-width: 400px;
+  min-height: 300px;
+  padding: 10px;
+}
+
+@property --start-deg {
+  inherits: true;
+  initial-value: 0deg;
+  syntax: '<angle>';
+}
+
+.box-wrapper::before {
+  position: absolute;
+  z-index: -10;
+
+  background: repeating-conic-gradient(from var(--start-deg), #ff0, #0ff, #f0f);
+  border-radius: 20px;
+  inset: 0;
+
+  animation: rotating 4s linear infinite;
+
+  content: '';
+}
+
+.box-wrapper::after {
+  position: absolute;
+  z-index: -5;
+
+  background: repeating-conic-gradient(from var(--start-deg), #ff0, #0ff, #f0f);
+  border-radius: 20px;
+  inset: 0;
+  opacity: 0.75;
+  filter: blur(40px);
+
+  animation: rotating 4s linear infinite;
+
+  content: '';
+}
+
+@keyframes rotating {
+  0% {
+    --start-deg: 0deg;
+  }
+  100% {
+    --start-deg: 360deg;
+  }
+}
+
+.box-wrapper .wrapper-content {
+  width: 400px;
+  padding: 20px;
+
+  color: #fff;
+
+  background: #222;
+  border-radius: 16px;
+  inset: 4px;
+}
+
+.box-inner {
+  position: relative;
+  z-index: 5;
+
+  width: 150px;
+  height: 150px;
 }

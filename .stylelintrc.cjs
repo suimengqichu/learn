@@ -271,6 +271,8 @@ const emptyLineBetweenGroups = true
 
 module.exports = {
   // extends: ['stylelint-config-rational-order'],
+  // 开启html文件的stylelint校验，支持HTML和HTML-like（xml、vue、svelte、astro、php）[未测试]
+  extends: ['stylelint-config-html'],
   plugins: ['stylelint-order'],
   ignoreFiles: ['**/*.js'],
   rules: {
