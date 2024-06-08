@@ -89,13 +89,13 @@ body {
   width: 150px;
   height: 150px;
 
-  background: #000;
+  background: #222;
   border-radius: 10px;
   transform: rotate(-45deg);
 
   
   clip-path: url(#myPath);
   /* clip-path使用时注意点：通过url使用svg路径时path中的点是相对点，直接书写path时是绝对点 */
-  clip-path: path('M0,0L0,100L100,0Z');
+  clip-path: path('M0,0L0,50L50,0Z');
   
 }
