@@ -19,7 +19,7 @@ body {
   position: relative;
 
   width: 400px;
-  min-height: 300px;
+  height: 400px;
 }
 
 .box-wrapper::before,
@@ -76,7 +76,6 @@ body {
   position: absolute;
   z-index: 1;
 
-  grid-template-columns: auto;
   margin: 0;
   padding: 20px;
 
@@ -116,12 +115,12 @@ body {
 .box-inner {
   --start-deg: -45deg;
 
-  position: relative;
+  position: absolute;
 
   width: 150px;
-  min-height: 150px;
+  height: 150px;
 
-  transform: translate(-80px) rotate(45deg);
+  transform: translate(-60px, -100px) rotate(45deg);
   transform-origin: 0 0;
 }
 
