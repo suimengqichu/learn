@@ -5,8 +5,8 @@
 }
 body {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100vh;
 
   font-family: Arial;
@@ -168,7 +168,6 @@ body {
   /* border-radius: 16px; */
   /* inset: 10px; */
   /* transform: rotate(-45deg); */
-
 }
 
 .test {

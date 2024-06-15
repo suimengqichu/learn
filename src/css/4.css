@@ -1,7 +1,8 @@
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+
   font-family: Poppins, sans-serif;
 }
 
@@ -11,14 +12,16 @@
 
 body {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   min-height: 100vh;
+
   background: #222;
 }
 
 .container {
   position: relative;
+
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -28,31 +31,38 @@ body {
 
 .tabs {
   position: relative;
+
   width: 80px;
   padding: 40px 0;
 }
 
 .tabs input {
   display: none;
+
   appearance: none;
 }
 
 .tabs .icon {
   position: relative;
+
   display: flex;
   flex-direction: column;
 }
 
 .tabs .icon label {
   z-index: 2;
+
   width: 80px;
   height: 80px;
+
+  color: #fff;
   font-size: 20px;
   line-height: 80px;
-  color: #fff;
   text-align: center;
+
   cursor: pointer;
   opacity: 0.25;
+
   transition: 0.5s;
 }
 
@@ -66,11 +76,14 @@ body {
 .indicator {
   position: absolute;
   z-index: 1;
+
   width: 80px;
   height: 80px;
+
   background: var(--clr);
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
+
   transition: 0.5s;
 }
 
@@ -78,24 +91,30 @@ body {
   position: absolute;
   top: -20px;
   right: 0;
+
   width: 20px;
   height: 20px;
-  content: '';
+
   background: transparent;
   border-bottom-right-radius: 20px;
   box-shadow: 8px 8px 0 8px var(--clr);
+
+  content: '';
 }
 
 .indicator::after {
   position: absolute;
   right: 0;
   bottom: -20px;
+
   width: 20px;
   height: 20px;
-  content: '';
+
   background: transparent;
   border-top-right-radius: 20px;
   box-shadow: 8px -8px 0 8px var(--clr);
+
+  content: '';
 }
 
 .tabs input:nth-of-type(1):checked ~ .icon .indicator {
@@ -118,7 +137,9 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+
   width: 520px;
   height: 400px;
+
   background: var(--clr);
 }

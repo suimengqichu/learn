@@ -6,8 +6,8 @@
 
 body {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   min-height: 100vh;
 
   background: #222;
@@ -38,7 +38,7 @@ body {
   border-radius: 20px;
   inset: 0;
 
-  content: '';/* animation: rotating 4s linear infinite; */
+  content: ''; /* animation: rotating 4s linear infinite; */
 }
 
 .box-wrapper::before,

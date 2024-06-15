@@ -1,0 +1,59 @@
+:root {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  height: 100vh;
+
+  background-color: #f4f4f4;
+}
+
+.grid-wrapper {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, minmax(200px, 300px));
+  /* content用于设置grid布局整体的元素排列位置 */
+  justify-content: center;
+  align-content: center;
+  /* items用于设置grid布局下面每个元素内部排列方式 */
+  justify-items: center;
+  align-items: center;
+  width: 1000px;
+  height: 1000px;
+  padding: 10px;
+}
+
+.grid-item {
+  /* grid布局子元素设置的self会覆盖父元素中设置的排列方式 */
+  justify-self: left;
+  align-self: last baseline;
+  padding: 20px;
+
+  font-size: 20px;
+  text-align: center;
+
+  background-color: #ccc;
+}
+
+.grid-item-1 {
+  /* 通过设置grid-row和grid-column的起始线和终止线改变其原始位置 */
+  z-index: 5;
+
+  grid-row: 1 / 4;
+  grid-column: 1 / 3;
+
+  background-color: #0ff;
+}
+
+.second-row-items {
+  grid-row: 2 / 4;
+  /* grid-column: 1 / -1; */
+  grid-column: 1 / 3;
+
+  background-color: #f0f;
+}

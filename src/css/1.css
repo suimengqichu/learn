@@ -1,41 +1,39 @@
 * {
-  margin: 0;
   box-sizing: border-box;
+  margin: 0;
   padding: 0;
 }
 body {
   display: flex;
-
+  justify-content: center;
+  align-items: center;
   height: 100vh;
 
   background-color: #f5f5f5;
-
-  align-items: center;
-  justify-content: center;
 }
 .box {
-  /* 隐藏超过盒子方位的元素 */
-  overflow: hidden;
-
-  position: relative;
-  /* 这里必须设置z-index具体值即可，如果不设置无法显示设置较低层级伪元素中的内容，但需注意伪元素由于是会覆盖整个元素内容，不能设置比伪元素小的值，伪元素的z-index必须是负值 */
-  z-index: 0;
-
-  border-radius: 20px;
-  padding: 40px 40px;
-  /* 通过padding将元素尽量设置成一个正方形，使得在动画过程中流水边框不容易看出区别 */
-
-  font-size: 18px;
-
-  color: #66ddf7;
-  background-color: #fff;
-
   --startDeg: 0deg;
   --endDeg: 100deg;
   --startDegDelta: -360deg;
   --endDegDelta: -260deg;
   --startPer: 0%;
   --endPer: 30%;
+
+  position: relative;
+  /* 这里必须设置z-index具体值即可，如果不设置无法显示设置较低层级伪元素中的内容，但需注意伪元素由于是会覆盖整个元素内容，不能设置比伪元素小的值，伪元素的z-index必须是负值 */
+  z-index: 0;
+
+  padding: 40px 40px;
+  /* 隐藏超过盒子方位的元素 */
+  overflow: hidden;
+
+  color: #66ddf7;
+  /* 通过padding将元素尽量设置成一个正方形，使得在动画过程中流水边框不容易看出区别 */
+
+  font-size: 18px;
+
+  background-color: #fff;
+  border-radius: 20px;
 }
 @property --startDeg {
   syntax: '<angle>';
@@ -116,12 +114,11 @@ body {
   position: absolute;
   z-index: -1;
 
-  border-radius: 20px;
-
   background-color: #000;
-
-  content: '';
+  border-radius: 20px;
   /* inset设置让其内缩 */
 
   inset: 4px;
+
+  content: '';
 }
